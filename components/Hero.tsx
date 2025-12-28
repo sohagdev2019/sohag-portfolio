@@ -124,9 +124,10 @@ export default function Hero() {
         >
           Get in Touch
         </Link>
-        <Link
-          href="/resume.pdf"
+        <a
+          href="https://drive.google.com/file/d/1wHVsrVJdO8dgw7B0FV_uQqnahajS_62b/view?usp=sharing"
           target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-3 bg-gray-800/90 rounded-lg text-white font-semibold border border-gray-700/60 hover:border-gray-600 hover:bg-gray-700/90 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
         >
           <svg
@@ -147,7 +148,7 @@ export default function Hero() {
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
           View Resume
-        </Link>
+        </a>
       </div>
     </div>
   );

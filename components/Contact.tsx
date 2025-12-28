@@ -230,7 +230,8 @@ export default function Contact() {
               {/* Resume Download */}
               <p className="text-purple-400 mt-8 mb-2">$ cat resume.pdf</p>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1wHVsrVJdO8dgw7B0FV_uQqnahajS_62b"
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 text-purple-300 rounded-lg border border-purple-500/20 hover:from-blue-500/20 hover:via-purple-500/20 hover:to-pink-500/20 transition-all mb-8"
