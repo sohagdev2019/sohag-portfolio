@@ -1,201 +1,161 @@
-# sohag-portfolio
+# Sohag Hossain - Portfolio Website
+
+A modern, responsive portfolio website showcasing my work as a Full Stack Developer. Built with Next.js, React, TypeScript, and Tailwind CSS, this portfolio demonstrates my expertise in building scalable, enterprise-grade web applications.
+
+## About Me
+
+I'm **Sohag Hossain**, a Full Stack Developer with a passion for architecting scalable, enterprise-grade solutions across the full stack. I lead high-performing development teams and specialize in modern web technologies including React, Next.js, TypeScript, Node.js, Python, and PostgreSQL.
+
+### Current Role
+**Team Lead / Full Stack Developer** at Remote Talent Ltd. (Dhaka, Bangladesh)  
+*Leading teams to architect scalable, enterprise-grade solutions across the full stack*
+
+### Expertise
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS, Zustand, Framer Motion
+- **Backend**: Node.js, Express, Python, Django, Go, REST APIs
+- **Database**: PostgreSQL, Prisma ORM, SQL
+- **Cloud & DevOps**: Digital Ocean, Vercel, CI/CD, VPS Management
+- **Tools**: Git, GitHub, Linux, Stripe Payments
+- **Design**: UX/UI Design, Figma, Adobe XD, Product Design
+
+## Project Overview
+
+This portfolio website serves as a comprehensive showcase of my professional journey, technical skills, and project portfolio. It features a modern, dark-themed design with smooth animations and optimized performance.
+
+### Why This Project?
+
+This portfolio represents more than just a personal website—it's a demonstration of:
+
+1. **Modern Web Development Practices**: Built with the latest Next.js 16 and React 19, showcasing server-side rendering, static site generation, and optimized performance.
+
+2. **Full-Stack Capabilities**: Demonstrates proficiency in both frontend and backend technologies, with API integrations and contact form functionality.
+
+3. **Performance & SEO Optimization**: Implements best practices for search engine optimization, including metadata management, sitemap generation, and robots.txt configuration.
+
+4. **User Experience Design**: Features smooth animations, responsive design, and an intuitive navigation system that enhances user engagement.
+
+5. **Professional Presentation**: Showcases my work experience, technical skills, and project portfolio in an organized, visually appealing manner.
+
+## Features
+
+- ✨ **Modern UI/UX**: Gradient-based design with smooth animations and transitions
+- 📱 **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- 🚀 **Performance Optimized**: Server-side rendering, static generation, and code splitting
+- 🔍 **SEO Optimized**: Comprehensive metadata, Open Graph tags, and structured data
+- 💼 **Work Experience Section**: Detailed showcase of professional journey and achievements
+- 🛠️ **Tech Stack Showcase**: Interactive display of technical skills and expertise
+- 🎨 **Project Portfolio**: Featured projects with detailed descriptions and links
+- 📧 **Contact Form**: Functional contact API for direct communication
+- 🌐 **Accessibility**: Semantic HTML and ARIA labels for better accessibility
+
+## Tech Stack
 
-Commit #1 - 2025-12-28 19:55:28
+### Frontend
+- **Framework**: Next.js 16.0.7
+- **UI Library**: React 19.2.0
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Animations**: CSS transitions and Intersection Observer API
 
-Commit #2 - 2025-12-28 19:55:30
+### Backend
+- **Runtime**: Node.js
+- **API Routes**: Next.js API Routes
+- **Type Safety**: TypeScript
 
-Commit #3 - 2025-12-28 19:55:31
+### Development Tools
+- **Linting**: ESLint
+- **Package Manager**: npm
+- **Version Control**: Git
 
-Commit #4 - 2025-12-28 19:55:33
+## Project Structure
 
-Commit #5 - 2025-12-28 19:55:34
+```
+sohag-p/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   │   └── contact/       # Contact form API
+│   ├── projects/          # Project detail pages
+│   │   ├── edupeak/       # EduPeak project page
+│   │   └── tribe/         # Tribe project page
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── globals.css        # Global styles
+│   └── metadata files     # SEO configuration
+├── components/            # React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Hero.tsx           # Hero section
+│   ├── TechStack.tsx      # Skills showcase
+│   ├── WorkExperience.tsx # Experience timeline
+│   ├── Projects.tsx       # Projects grid
+│   ├── Contact.tsx        # Contact form
+│   └── Footer.tsx         # Footer component
+├── lib/                   # Utility functions
+│   └── projectsConfig.ts  # Project configuration
+├── public/                # Static assets
+│   └── images/            # Images and graphics
+└── types/                 # TypeScript type definitions
+```
 
-Commit #6 - 2025-12-28 19:55:36
+## Sections
 
-Commit #7 - 2025-12-28 19:55:37
+1. **Hero Section**: Introduction with profile photo and call-to-action buttons
+2. **Tech Stack**: Interactive display of technical skills across Frontend, Backend, Design, and Tools
+3. **Work Experience**: Professional journey timeline with detailed responsibilities
+4. **Modern Web Capabilities**: Showcase of web development capabilities
+5. **Projects**: Featured projects including:
+   - **EduPeak**: A knowledge sharing and learning management platform
+   - **Tribe**: A community-driven social platform
+6. **Contact**: Contact form and social links
+7. **Footer**: Additional links and information
 
-Commit #8 - 2025-12-28 19:55:38
+## Getting Started
 
-Commit #9 - 2025-12-28 19:55:40
+### Prerequisites
 
-Commit #10 - 2025-12-28 19:55:41
+- Node.js 18+ installed
+- npm or yarn package manager
 
-Commit #11 - 2025-12-28 19:55:43
+### Installation
 
-Commit #12 - 2025-12-28 19:55:44
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/sohag-p.git
+cd sohag-p
+```
 
-Commit #13 - 2025-12-28 19:55:46
+2. Install dependencies:
+```bash
+npm install
+```
 
-Commit #14 - 2025-12-28 19:55:47
+3. Run the development server:
+```bash
+npm run dev
+```
 
-Commit #15 - 2025-12-28 19:55:48
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Commit #16 - 2025-12-28 19:55:50
+### Build for Production
 
-Commit #17 - 2025-12-28 19:55:51
+```bash
+npm run build
+npm start
+```
 
-Commit #18 - 2025-12-28 19:55:53
+## Live Demo
 
-Commit #19 - 2025-12-28 19:55:54
+Visit the live portfolio: [https://www.sohagdev.com](https://www.sohagdev.com)
 
-Commit #20 - 2025-12-28 19:55:55
+## Contact
 
-Commit #21 - 2025-12-28 19:55:57
+- **Portfolio**: [https://www.sohagdev.com](https://www.sohagdev.com)
+- **Resume**: [View Resume](https://drive.google.com/file/d/1wHVsrVJdO8dgw7B0FV_uQqnahajS_62b/view?usp=sharing)
+- **Twitter**: [@sohagmia360](https://twitter.com/sohagmia360)
 
-Commit #22 - 2025-12-28 19:55:58
+## License
 
-Commit #23 - 2025-12-28 19:56:00
+This project is private and proprietary. All rights reserved.
 
-Commit #24 - 2025-12-28 19:56:01
+---
 
-Commit #25 - 2025-12-28 19:56:03
-
-Commit #26 - 2025-12-28 19:56:04
-
-Commit #27 - 2025-12-28 19:56:06
-
-Commit #28 - 2025-12-28 19:56:07
-
-Commit #29 - 2025-12-28 19:56:08
-
-Commit #30 - 2025-12-28 19:56:10
-
-Commit #31 - 2025-12-28 19:56:11
-
-Commit #32 - 2025-12-28 19:56:13
-
-Commit #33 - 2025-12-28 19:56:14
-
-Commit #34 - 2025-12-28 19:56:15
-
-Commit #35 - 2025-12-28 19:56:17
-
-Commit #36 - 2025-12-28 19:56:18
-
-Commit #37 - 2025-12-28 19:56:19
-
-Commit #38 - 2025-12-28 19:56:21
-
-Commit #39 - 2025-12-28 19:56:23
-
-Commit #40 - 2025-12-28 19:56:24
-
-Commit #41 - 2025-12-28 19:56:26
-
-Commit #42 - 2025-12-28 19:56:27
-
-Commit #43 - 2025-12-28 19:56:28
-
-Commit #44 - 2025-12-28 19:56:30
-
-Commit #45 - 2025-12-28 19:56:32
-
-Commit #46 - 2025-12-28 19:56:33
-
-Commit #47 - 2025-12-28 19:56:34
-
-Commit #48 - 2025-12-28 19:56:36
-
-Commit #49 - 2025-12-28 19:56:37
-
-Commit #50 - 2025-12-28 19:56:39
-
-Commit #51 - 2025-12-28 19:56:40
-
-Commit #52 - 2025-12-28 19:56:41
-
-Commit #53 - 2025-12-28 19:56:43
-
-Commit #54 - 2025-12-28 19:56:44
-
-Commit #55 - 2025-12-28 19:56:46
-
-Commit #56 - 2025-12-28 19:56:47
-
-Commit #57 - 2025-12-28 19:56:49
-
-Commit #58 - 2025-12-28 19:56:50
-
-Commit #59 - 2025-12-28 19:56:51
-
-Commit #60 - 2025-12-28 19:56:53
-
-Commit #61 - 2025-12-28 19:56:54
-
-Commit #62 - 2025-12-28 19:56:56
-
-Commit #63 - 2025-12-28 19:56:57
-
-Commit #64 - 2025-12-28 19:56:59
-
-Commit #65 - 2025-12-28 19:57:00
-
-Commit #66 - 2025-12-28 19:57:02
-
-Commit #67 - 2025-12-28 19:57:03
-
-Commit #68 - 2025-12-28 19:57:05
-
-Commit #69 - 2025-12-28 19:57:06
-
-Commit #70 - 2025-12-28 19:57:08
-
-Commit #71 - 2025-12-28 19:57:09
-
-Commit #72 - 2025-12-28 19:57:11
-
-Commit #73 - 2025-12-28 19:57:12
-
-Commit #74 - 2025-12-28 19:57:14
-
-Commit #75 - 2025-12-28 19:57:15
-
-Commit #76 - 2025-12-28 19:57:16
-
-Commit #77 - 2025-12-28 19:57:18
-
-Commit #78 - 2025-12-28 19:57:19
-
-Commit #79 - 2025-12-28 19:57:21
-
-Commit #80 - 2025-12-28 19:57:22
-
-Commit #81 - 2025-12-28 19:57:23
-
-Commit #82 - 2025-12-28 19:57:25
-
-Commit #83 - 2025-12-28 19:57:26
-
-Commit #84 - 2025-12-28 19:57:28
-
-Commit #85 - 2025-12-28 19:57:29
-
-Commit #86 - 2025-12-28 19:57:31
-
-Commit #87 - 2025-12-28 19:57:32
-
-Commit #88 - 2025-12-28 19:57:33
-
-Commit #89 - 2025-12-28 19:57:35
-
-Commit #90 - 2025-12-28 19:57:36
-
-Commit #91 - 2025-12-28 19:57:38
-
-Commit #92 - 2025-12-28 19:57:39
-
-Commit #93 - 2025-12-28 19:57:40
-
-Commit #94 - 2025-12-28 19:57:42
-
-Commit #95 - 2025-12-28 19:57:44
-
-Commit #96 - 2025-12-28 19:57:45
-
-Commit #97 - 2025-12-28 19:57:47
-
-Commit #98 - 2025-12-28 19:57:48
-
-Commit #99 - 2025-12-28 19:57:49
-
-Commit #100 - 2025-12-28 19:57:51
+**Built with ❤️ by Sohag Hossain**
