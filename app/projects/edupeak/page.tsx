@@ -243,7 +243,7 @@ export default function EduPeakProjectPage() {
             <div className="relative w-full h-full flex items-center justify-center border-2 border-blue-500/50 rounded-2xl animate-border-pulse overflow-hidden">
               <Image
                 src={selectedImage}
-                alt="Full screen image"
+                alt={selectedImage.includes('hero') ? 'EduPeak LMS Hero Section - Full Screen View' : selectedImage.includes('course') ? 'EduPeak Course Management Interface' : selectedImage.includes('admin') ? 'EduPeak Admin Dashboard' : 'EduPeak LMS Feature Screenshot'}
                 fill
                 className="object-contain rounded-2xl"
                 sizes="100vw"
@@ -428,7 +428,7 @@ export default function EduPeakProjectPage() {
                         >
                           <Image
                             src={category.image}
-                            alt={category.title}
+                            alt={`EduPeak LMS - ${category.title} Feature Interface showing ${category.features.slice(0, 3).join(', ')}`}
                             width={1200}
                             height={800}
                             className="w-full h-auto object-contain rounded-xl"

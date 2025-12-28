@@ -10,6 +10,9 @@ export default function Contact() {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastType, setToastType] = useState<'success' | 'error'>('success');
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,24 +45,136 @@ export default function Contact() {
     });
   };
 
+  const showToastNotification = (message: string, type: 'success' | 'error') => {
+    setToastMessage(message);
+    setToastType(type);
+    setShowToast(true);
+    
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      setShowToast(false);
+    }, 5000);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Handle form submission here
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setShowToast(false);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setFormData({ name: '', email: '', message: '' });
-    }, 1000);
+      showToastNotification('Message sent successfully! I\'ll get back to you soon. ✨', 'success');
+    } catch (error) {
+      showToastNotification(
+        error instanceof Error
+          ? error.message
+          : 'Failed to send message. Please try again later.',
+        'error'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div
-      ref={sectionRef}
-      id="contact"
-      className={`flex flex-col w-full mt-24 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
+    <>
+      {/* Toast Notification */}
+      <div
+        className={`fixed top-4 right-4 z-50 transition-all duration-300 ease-in-out ${
+          showToast
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-full pointer-events-none'
+        }`}
+      >
+        <div
+          className={`flex items-center gap-3 px-6 py-4 rounded-lg shadow-2xl backdrop-blur-lg border ${
+            toastType === 'success'
+              ? 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-500/50'
+              : 'bg-gradient-to-r from-red-500/20 to-rose-500/20 border-red-500/50'
+          } min-w-[320px] max-w-md`}
+        >
+          {toastType === 'success' ? (
+            <div className="flex-shrink-0">
+              <svg
+                className="w-6 h-6 text-green-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          ) : (
+            <div className="flex-shrink-0">
+              <svg
+                className="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          )}
+          <p
+            className={`font-mono text-sm font-medium ${
+              toastType === 'success' ? 'text-green-300' : 'text-red-300'
+            }`}
+          >
+            {toastMessage}
+          </p>
+          <button
+            onClick={() => setShowToast(false)}
+            className="flex-shrink-0 ml-auto text-gray-400 hover:text-white transition-colors"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        ref={sectionRef}
+        id="contact"
+        className={`flex flex-col w-full mt-24 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
       <div className="max-w-4xl mx-auto w-full">
         <div className="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50">
           {/* Gradient background */}
@@ -242,5 +357,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }

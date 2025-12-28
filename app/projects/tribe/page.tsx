@@ -163,9 +163,12 @@ export default function TribeProjectPage() {
           ].map((image) => (
             <div key={image} className="w-full max-w-[700px]">
               <div className="border-2 border-gray-400/50 rounded-xl overflow-hidden">
-                <div className="w-full h-auto bg-gray-800 aspect-square flex items-center justify-center">
-                  <div className="text-gray-500 text-sm">Project Image: {image}</div>
-                </div>
+                <img
+                  src={`/images/${image}`}
+                  alt={`TRIBE Community App - ${image.replace('tribe-', '').replace('.png', '').replace(/-/g, ' ')} interface screenshot`}
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}

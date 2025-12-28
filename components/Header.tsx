@@ -72,6 +72,7 @@ export default function Header() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <path d="M4 6l16 0"></path>
                 <path d="M4 12l16 0"></path>
@@ -104,6 +105,7 @@ export default function Header() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  aria-hidden="true"
                 >
                   <path d="M18 6l-12 12"></path>
                   <path d="M6 6l12 12"></path>

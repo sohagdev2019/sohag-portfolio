@@ -143,7 +143,7 @@ export default function Projects() {
             <div className="relative w-full h-full flex items-center justify-center border-2 border-blue-500/50 rounded-2xl animate-border-pulse overflow-hidden">
               <Image
                 src={selectedImage}
-                alt="Full screen image"
+                alt={selectedImage.includes('hero') ? 'EduPeak LMS Hero Section - Full Screen View' : selectedImage.includes('course') ? 'EduPeak Course Dashboard and Progress Tracking Interface' : selectedImage.includes('admin') ? 'EduPeak Admin Analytics Dashboard' : 'EduPeak LMS Project Screenshot'}
                 fill
                 className="object-contain rounded-2xl"
                 sizes="100vw"

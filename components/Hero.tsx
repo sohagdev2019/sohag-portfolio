@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Hero() {
@@ -45,10 +46,15 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
           <div className="w-full h-full bg-[#0a0a0a] rounded-full p-1">
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-4xl">
-                SH
-              </div>
+            <div className="w-full h-full rounded-full overflow-hidden">
+              <Image
+                src="/images/my-images/sohag3.png"
+                alt="Sohag Hossain - Full Stack Developer Profile Photo"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover rounded-full"
+                priority
+              />
             </div>
           </div>
         </div>

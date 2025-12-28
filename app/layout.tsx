@@ -121,6 +121,23 @@ export default function RootLayout({
     "description": "Full Stack Developer crafting exceptional digital experiences with modern web technologies."
   };
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sohag Hossain - Full Stack Developer Portfolio",
+    "url": "https://www.sohagdev.com",
+    "description": "Portfolio of Sohag Hossain, a Full Stack Developer specializing in React, Next.js, TypeScript, Node.js, and modern web technologies.",
+    "author": {
+      "@type": "Person",
+      "name": "Sohag Hossain"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.sohagdev.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="en" className="dark">
       <body
@@ -130,6 +147,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {children}
       </body>
