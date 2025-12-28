@@ -89,7 +89,7 @@ export default function Hero() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        Crafting exceptional digital experiences with modern web technologies
+        Leading teams to architect scalable, enterprise-grade solutions across the full stack
       </p>
 
       {/* Call-to-Action Buttons */}
